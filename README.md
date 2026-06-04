@@ -38,10 +38,6 @@ O **Libft** é o primeiro projeto oficial da grade curricular da 42. O objetivo 
 * `ft_strnstr` - Localiza uma sub-string dentro de uma string com limite de tamanho.
 * `ft_atoi` - Converte uma string de caracteres em um número inteiro (tratando espaços, sinais e dígitos).
 
-### Funções Adicionais (Criadas pela 42)
-* *Adicione aqui as outras funções conforme for fazendo (ex: `ft_substr`, `ft_strjoin`, `ft_split`, etc.)*
-
----
 
 ## 🚀 Como Compilar e Usar
 
