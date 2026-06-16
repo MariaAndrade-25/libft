@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malves-a <malves-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/03 11:19:10 by malves-a          #+#    #+#             */
-/*   Updated: 2026/06/03 11:32:59 by malves-a         ###   ########.fr       */
+/*   Created: 2026/06/10 10:40:43 by malves-a          #+#    #+#             */
+/*   Updated: 2026/06/10 12:14:09 by malves-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t			i;
-	unsigned char	*ptr;
+	long	nb;
+	char	c;
 
-	ptr = (unsigned char *)s;
-	i = 0;
-	while (i < n)
-	{	
-		if (ptr[i] == (unsigned char)c)
-		{
-			return ((void *)&ptr[i]);
-		}
-	i++;
+	nb = n;
+	if (nb < 0)
+	{
+		write(fd, "-", 1);
+		nb = -nb;
 	}
-	return (NULL);
+	if (nb >= 10)
+	{	
+		ft_putnbr_fd(nb / 10, fd);
+	}
+	c = (nb % 10) + '0';
+	write(fd, &c, 1);
 }
