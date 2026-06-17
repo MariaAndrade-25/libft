@@ -1,4 +1,4 @@
-# Libft - @42SP
+# Libft - @42SP 💙
 
 <p align="center">
   <img src="https://img.shields.io/badge/Language-C-blue.svg" alt="Language" />
